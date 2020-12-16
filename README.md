@@ -2,6 +2,16 @@
 
 This repository contains the Terraform module code to manage a Netlify site.
 
+## Usage
+
+```hcl
+module "netlify_site" {
+  source  = "nephosolutions/site/netlify"
+  version = "1.0.0"
+  # insert the 3 required variables here
+}
+```
+
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
@@ -29,7 +39,7 @@ This repository contains the Terraform module code to manage a Netlify site.
 
 | Name | Description |
 |------|-------------|
-| custom\_domain | n/a |
-| name | n/a |
+| custom\_domain | Custom domain of the site, must be configured using a CNAME in accordance with Netlify's docs. (e.g. www.example.com) |
+| name | Name of your site on Netlify (e.g. mysite.netlify.app) |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

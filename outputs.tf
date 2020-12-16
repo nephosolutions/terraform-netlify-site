@@ -13,9 +13,11 @@
 # limitations under the License.
 
 output "custom_domain" {
-  value = netlify_site.managed.custom_domain
+  description = "Custom domain of the site, must be configured using a CNAME in accordance with Netlify's docs. (e.g. www.example.com)"
+  value       = netlify_site.managed.custom_domain
 }
 
 output "name" {
-  value = netlify_site.managed.name
+  description = "Name of your site on Netlify (e.g. mysite.netlify.app)"
+  value       = netlify_site.managed.name
 }
